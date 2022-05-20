@@ -1,16 +1,23 @@
 import React from "react";
 
-function  Accordion() {
+type AccordionProps = {
+    titleValue: string
+}
+
+function  Accordion(props: AccordionProps) {
     return <div>
-        <AccordionTitle />
+        <AccordionTitle title = {props.titleValue}/>
         <AccordionBody />
     </div>
 }
+type AccordionTitleProps = {
+    title: string
+}
 
-function  AccordionTitle() {
+function  AccordionTitle(props: AccordionTitleProps) {
     console.log("AccordionTitle вывести")
     return(
-        <h3>Menu</h3>
+        <h3>{props.title}</h3>
     )
 }
 

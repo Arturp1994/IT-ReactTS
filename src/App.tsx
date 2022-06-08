@@ -3,6 +3,8 @@ import './App.css';
 import Accordion from "./components/Accordio";
 import {Rating} from "./components/Reting";
 import OnOff from "./components/OnOff";
+import UncontrolledAccordion from "./components/UncontrolledAccordio";
+import {UncontrolledRating} from "./components/UncontrolledReting";
 
 function App() {
   return (
@@ -14,11 +16,11 @@ function App() {
         {/*<PageTitle title={'Заголовок1'}/>*/}
         {/*<PageTitle title={'Заголовок2'}/>*/}
 
-        {/*<Accordion titleValue = {'Меню1'} collapsed ={true}/>*/}
-        {/*<Accordion titleValue = {'Меню2'} collapsed ={false}/>*/}
+        <Accordion titleValue = {'Меню1'} collapsed={true}/>
+        <UncontrolledAccordion titleValue = {'Меню2'} />
 
-        {/*<Rating value = {1}/>*/}
-        {/*<Rating value = {2}/>*/}
+        <UncontrolledRating/>
+        <Rating value = {2}/>
         {/*<Rating value = {3}/>*/}
         {/*<Rating value = {4}/>*/}
         {/*<Rating value = {5}/>*/}

@@ -3,23 +3,25 @@ import React from "react";
 type AccordionProps = {
     titleValue: string
     collapsed: boolean
+    onChange: ()=>void
 }
 
 function Accordion(props: AccordionProps) {
         return <div>
-            <AccordionTitle title={props.titleValue}/>
-            {!props.collapsed && <AccordionBody/>} // краткое написание условий с true и false
+            <AccordionTitle title={props.titleValue} onChange={props.onChange}/>
+            {!props.collapsed && <AccordionBody/>}
         </div>
     }
 
 type AccordionTitleProps = {
     title: string
+    onChange: ()=>void
 }
 
 function  AccordionTitle(props: AccordionTitleProps) {
     console.log("AccordionTitle вывести")
     return(
-        <h3>{props.title}</h3>
+        <h3 onClick={props.onChange}>{props.title}</h3>
     )
 }
 
